@@ -39,3 +39,29 @@ let myObj = {
 const myFunction = function(){
     // console.log("hello world");
 }  //datatype typeof - object function
+
+
+
+// +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ //
+
+// Memory two types : Stack(Primitive Type), Heap(Non-Primitive)
+
+//example
+
+let myYoutubename = "hardiklakumdotcom"
+
+let anothername = myYoutubename
+anothername = "hardik aur code"
+// console.log(anothername);
+// console.log(myYoutubename);
+
+let userOne = {
+    email : "user@gmail.com",
+    upi : "user@ybl",
+}
+
+let userTwo = userOne
+userTwo.email = "hardik@gmail.com"
+
+console.log(userOne.email);
+console.log(userTwo.email);
