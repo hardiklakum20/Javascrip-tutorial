@@ -15,17 +15,34 @@
     const sayDate = function(str){
         console.log(str,Date.now());
     }
-    const intervalId = setInterval(sayDate, 1000, "Hi")
+    let intervalId;
 
-    document.querySelector('#stop').addEventListener('click',function(){
-        clearInterval(intervalId)
-        console.log("Stop");        
-    })
+    // const changeNumber = function(){
+    //     intervalId = setInterval(sayDate, 1000, "Hi")        
+    // }
 
-    document.querySelector('#start').addEventListener('click',function(){
-        // setInterval(sayDate, 1000, "Hi")
-        console.log("Started");        
-    })
+    const startNumber = function(){  
+        if (!intervalId) {
+           intervalId = setInterval(sayDate, 1000, "Hi")
+            console.log("start");   
+        }      
+             
+    }
+
+    const stopNumber = function(){
+        if (intervalId) {
+            clearInterval(intervalId);
+            console.log("stop");
+            intervalId = null;
+        }
+                       
+    }
+
+    
+
+    document.querySelector('#stop').addEventListener('click',stopNumber)
+
+    document.querySelector('#start').addEventListener('click',startNumber)
 
     
 </script>
